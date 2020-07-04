@@ -13,3 +13,6 @@ python manage.py startapp users
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
+
+configure the env variables
+set up Git 

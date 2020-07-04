@@ -28,13 +28,11 @@ environ.Env.read_env()
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env("DEBUG", default=0)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
 
-
-# Application definition
-
+# Application definitions
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

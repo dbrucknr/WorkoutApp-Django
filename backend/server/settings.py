@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Local Applications
     'users.apps.UsersConfig',
+    'workouts.apps.WorkoutsConfig',
 
     # Third-party Applications
     'rest_framework'

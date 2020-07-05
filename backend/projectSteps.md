@@ -24,3 +24,5 @@ Added the .sh file, change permissions: 'chmod +x ./entrypoint.sh'
 Update the Dockerfile to run the shell script, as the container depends on the postgres DB
 
 docker-compose exec workouts pytest
+docker-compose exec workouts python manage.py makemigrations
+docker-compose exec workouts python manage.py migrate

@@ -16,3 +16,9 @@ python manage.py createsuperuser
 
 configure the env variables
 set up Git 
+
+...
+
+docker-compose exec workouts-db psql --username=workout --dbname=workouts_dev
+Added the .sh file, change permissions: 'chmod +x ./entrypoint.sh'
+Update the Dockerfile to run the shell script, as the container depends on the postgres DB

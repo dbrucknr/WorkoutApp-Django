@@ -27,3 +27,17 @@ docker-compose exec workouts pytest
 docker-compose exec workouts python manage.py makemigrations
 docker-compose exec workouts python manage.py migrate
 docker-compose exec workouts python manage.py createsuperuser
+
+# Query local database:
+* docker exec -it backend_workouts-db_1 bash
+* psql workouts_dev -U workout
+### list DB's:
+* \l
+### select DB:
+* \c workouts_dev;
+### show tables in selected DB:
+* \dt
+### quit the selected DB terminal session:
+* \q
+### quit the bash container bash session:
+* exit

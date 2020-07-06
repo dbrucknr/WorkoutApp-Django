@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Local Applications
     'users.apps.UsersConfig',
     'workouts.apps.WorkoutsConfig',
+    'api.apps.ApiConfig',
 
     # Third-party Applications
     'rest_framework'

@@ -28,6 +28,10 @@ docker-compose exec workouts python manage.py makemigrations
 docker-compose exec workouts python manage.py migrate
 docker-compose exec workouts python manage.py createsuperuser
 
+### Load in sample runs from fixtures.
+docker-compose exec workouts python manage.py flush
+docker-compose exec workouts python manage.py loaddata runs.json
+
 # Query local database:
 * docker exec -it backend_workouts-db_1 bash
 * psql workouts_dev -U workout
